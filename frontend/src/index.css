@@ -1,0 +1,95 @@
+/* ============================================================
+   Design System — based on DESIGN.md
+   ============================================================ */
+
+/* --- Color tokens --- */
+:root {
+  /* Canvas & Surfaces */
+  --color-canvas: #000000;
+  --color-surface-card: #0a0a0c;
+  --color-surface-elevated: #101012;
+  --color-surface-deep: #06060a;
+
+  /* Borders */
+  --color-hairline: rgba(255, 255, 255, 0.06);
+  --color-hairline-strong: rgba(255, 255, 255, 0.14);
+  --color-divider-soft: rgba(255, 255, 255, 0.04);
+
+  /* Text */
+  --color-ink: #fcfdff;
+  --color-body: rgba(252, 253, 255, 0.86);
+  --color-charcoal: rgba(252, 253, 255, 0.7);
+  --color-mute: #a1a4a5;
+  --color-ash: #888e90;
+
+  /* Brand */
+  --color-primary: #fcfdff;
+  --color-primary-on: #000000;
+  --color-surface-light: #f1f7fe;
+
+  /* Accent glows */
+  --color-accent-blue: #3b9eff;
+  --color-accent-blue-glow: rgba(0, 117, 255, 0.34);
+  --color-accent-green: #11ff99;
+  --color-accent-green-glow: rgba(34, 255, 153, 0.18);
+  --color-accent-orange-glow: rgba(255, 89, 0, 0.22);
+  --color-accent-red: #ff2047;
+
+  /* Typography */
+  --font-ui: 'Inter', sans-serif;
+  --font-mono: 'Geist Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-xxxl: 48px;
+  --spacing-section: 96px;
+
+  /* Border radius */
+  --rounded-xs: 4px;
+  --rounded-sm: 6px;
+  --rounded-md: 8px;
+  --rounded-lg: 12px;
+  --rounded-xl: 16px;
+  --rounded-full: 9999px;
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-ui);
+}
+
+input {
+  font-family: var(--font-ui);
+}

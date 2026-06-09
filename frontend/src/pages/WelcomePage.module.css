@@ -1,0 +1,171 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Atmospheric green glow */
+.glow {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 700px;
+  height: 600px;
+  background: radial-gradient(ellipse at top right, var(--color-accent-green-glow) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navigation bar */
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 var(--spacing-xxl);
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+.navBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: 0.35px;
+}
+
+.brandDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--rounded-full);
+  background-color: var(--color-accent-green);
+}
+
+.navButton {
+  height: 36px;
+  background-color: var(--color-surface-elevated);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline-strong);
+  border-radius: var(--rounded-md);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.15s ease;
+}
+
+.navButton:hover {
+  border-color: var(--color-charcoal);
+}
+
+/* Main content */
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-section) var(--spacing-xxl);
+}
+
+/* Session active badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-hairline-strong);
+  border-radius: var(--rounded-full);
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.badgeDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--rounded-full);
+  background-color: var(--color-accent-green);
+}
+
+/* Heading */
+.heading {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+  color: var(--color-ink);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Body text */
+.body {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-body);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xxxl);
+}
+
+/* Info card */
+.card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-hairline-strong);
+  border-radius: var(--rounded-lg);
+  padding: var(--spacing-xxl);
+  margin-bottom: var(--spacing-xxxl);
+}
+
+.cardLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cardValue {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: -0.3px;
+}
+
+/* Logout button */
+.logoutButton {
+  height: 36px;
+  background-color: var(--color-primary);
+  color: var(--color-primary-on);
+  border-radius: var(--rounded-md);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.logoutButton:hover {
+  background-color: var(--color-surface-light);
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .main {
+    padding: var(--spacing-xxxl) var(--spacing-xl);
+  }
+
+  .nav {
+    padding: 0 var(--spacing-xl);
+  }
+}
